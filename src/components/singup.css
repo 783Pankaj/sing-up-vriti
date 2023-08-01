@@ -1,0 +1,157 @@
+* {box-sizing: border-box}
+form{
+    padding: 10px;
+    
+}
+/* Full-width input fields */
+.userName{
+  max-width: 10vw;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background-color: #E8F0FE ;
+  position: relative;
+  left: 40px;
+ border-radius: 10px;
+ 
+}
+
+.signupbtn {
+  color: white;
+  padding: 14px 20px;
+  /* margin-left: 750px; */
+  border: none;
+ border-radius: 10px;
+   cursor: pointer;
+  width: 40%;
+   opacity: 0.9; 
+  color: white;
+  background-color: rgb(33, 8, 189);
+  position: relative;
+  top: 20px;
+  left: 80px;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.container {
+  padding: 10px;
+  position: relative;
+  /* top: 50px; */
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.label-name{
+    position: relative;
+    bottom: 40px;
+    left: 130px;
+}
+.labal-email{
+    position: relative;
+    bottom: 40px;
+    left: 110px;
+}
+.heading {
+    width: auto;
+   position: relative;
+   left: 80px;
+}
+
+.userEmail{
+    width: 40%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: #E8F0FE ;
+    position: relative;
+    left: 50px;
+   border-radius: 10px;
+}
+
+.labal-password{
+    position: relative;
+    bottom: 40px;
+    left: 120px;
+}
+
+.labal-con-pass{
+    position: relative;
+    bottom: 40px;
+    left: 150px;
+}
+
+.userPassword{
+    width: 40%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: #E8F0FE ;
+    position: relative;
+    left: 40px;
+   border-radius: 10px;
+}
+
+.confuserPassword{
+    width: 40%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: #E8F0FE ;
+    position: relative;
+    left: 10px;
+   border-radius: 10px;
+}
+.or-singup  {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    left: 80px;
+}
+
+.google{
+    background-color: rgb(240, 181, 189);
+    width: 100px;
+    height: 40px;
+   border-radius: 10px;
+     position: relative;
+   margin-right: 10px;
+
+}
+.linkedin{
+    background-color:#bbcfe2;
+    width: 100px;
+    height: 40px;
+   border-radius: 10px;
+       margin-left: 10px;
+}
+.socail-btn{
+    /* border: 1px solid red; */
+    position: relative;
+    padding: 10px;
+    justify-content: center;
+   left: 80px;
+}
+.login{
+    position: relative;
+    left: 80px;
+}
+.login p label{
+    color: blue;
+}
+
+@media screen and (max-width: 390px) {
+  .signupbtn{
+    width: 80%;
+  }
+  .labal-btn{
+     position: relative;
+     left: -90px;
+  }
+}

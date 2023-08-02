@@ -1,48 +1,51 @@
-* {box-sizing: border-box}
+*{
+  box-sizing: border-box;
+  font-family: Nunito Sans!important;
+  font-size: 20px;
+}
+.vritiLogo img{
+  width: 100%;
+ height: auto;
+ object-fit: fill;
+}
 form{
     padding: 10px;
     
 }
+.container { text-align: left;}
 /* Full-width input fields */
 .userName{
-  max-width: 10vw;
+  width: 100%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  margin: 5px 0 2px 0;
   display: inline-block;
   border: none;
   background-color: #E8F0FE ;
   position: relative;
-  left: 40px;
- border-radius: 10px;
- 
+  border-radius: 10px;
 }
 
+.fname,.mname,.lname{
+  margin-bottom: 15px;
+  text-align: start;
+font-size: 15px;
+}
 .signupbtn {
   color: white;
   padding: 14px 20px;
-  /* margin-left: 750px; */
   border: none;
  border-radius: 10px;
    cursor: pointer;
-  width: 40%;
+  width: 100%;
    opacity: 0.9; 
   color: white;
   background-color: rgb(33, 8, 189);
   position: relative;
-  top: 20px;
-  left: 80px;
 }
 
 button:hover {
   opacity:1;
 }
-
-.container {
-  padding: 10px;
-  position: relative;
-  /* top: 50px; */
-}
-
 .clearfix::after {
   content: "";
   clear: both;
@@ -50,108 +53,171 @@ button:hover {
 }
 .label-name{
     position: relative;
-    bottom: 40px;
-    left: 130px;
+    /* bottom: 40px;
+    left: 130px; */
 }
-.labal-email{
-    position: relative;
-    bottom: 40px;
-    left: 110px;
-}
-.heading {
-    width: auto;
-   position: relative;
-   left: 80px;
+.first_row, .second_row, .third_row, .fourth_row{
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 
-.userEmail{
-    width: 40%;
+.labal-email{
+    position: relative;
+    /* bottom: 40px;
+    left: 110px; */
+}
+p{ margin: 0; }
+.heading {
+  width: auto;
+  position: relative;
+  text-align: center;
+}
+small {
+  display: block;
+  /* width: 60%; */
+  /* margin: 0 auto; */
+  text-align: left;
+  color: red;
+}
+.userEmail, .userPassword, .confuserPassword{
+    width: 100%;
     padding: 15px;
-    margin: 5px 0 22px 0;
+    margin: 5px 0 2px 0;
     border: none;
     background-color: #E8F0FE ;
     position: relative;
-    left: 50px;
+    /* left: 50px; */
    border-radius: 10px;
 }
 
 .labal-password{
     position: relative;
-    bottom: 40px;
-    left: 120px;
+    /* bottom: 40px;
+    left: 120px; */
 }
 
 .labal-con-pass{
     position: relative;
-    bottom: 40px;
-    left: 150px;
+    /* bottom: 40px;
+    left: 150px; */
 }
-
-.userPassword{
-    width: 40%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background-color: #E8F0FE ;
-    position: relative;
-    left: 40px;
-   border-radius: 10px;
-}
-
-.confuserPassword{
-    width: 40%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background-color: #E8F0FE ;
-    position: relative;
-    left: 10px;
-   border-radius: 10px;
+p.email_p, p.password_p, p.cnf_password_p {
+  text-align: left;
+  /* width: 60%; */
+  margin: 0 auto;
 }
 .or-singup  {
     text-align: center;
     position: relative;
-    top: 10px;
-    left: 80px;
+    /* top: 10px;
+    left: 80px; */
 }
 
 .google{
     background-color: rgb(240, 181, 189);
-    width: 100px;
+    width: 27%;
     height: 40px;
    border-radius: 10px;
-     position: relative;
-   margin-right: 10px;
+     margin: 5px 0 2px 100px;
+   text-indent: 10%;
 
 }
 .linkedin{
     background-color:#bbcfe2;
-    width: 100px;
+    width: 27%;
     height: 40px;
    border-radius: 10px;
-       margin-left: 10px;
+   margin: 5px 0 2px 20px;
 }
 .socail-btn{
-    /* border: 1px solid red; */
     position: relative;
     padding: 10px;
     justify-content: center;
-   left: 80px;
 }
 .login{
     position: relative;
-    left: 80px;
+   margin-left: 35%;
 }
 .login p label{
     color: blue;
+    cursor: pointer;
+
+}
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (max-width: 390px) {
-  .signupbtn{
-    width: 80%;
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 20px;
+  background-color: rgb(78, 206, 131);
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: block;
+    padding: 10px;
+    margin: 0 0 0 500px;
+    width: 70%;
+    text-align: center;
   }
+  .signupbtn{ width: 60%; }
   .labal-btn{
      position: relative;
      left: -90px;
   }
+  .userEmail, .userPassword, .confuserPassword, p.email_p, p.password_p, p.cnf_password_p { width: 60%; }
+  .fname, .mname, .lname { display: inline-block; }
+  .userName{
+    width: 13vw;
+    /* width: 100%; */
+    margin: 5px 0 22px 0;
+  }
+  .mname { margin: 0 1%; }
+  small {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .user-error {
+    position: absolute;
+    bottom: 0;
+  }
+  .fname,.mname,.lname{
+    margin-bottom: 0;
+  }
+  .google{
+   margin-left: 40px;
+   width: 120px;
+    height: 50px;
+
+}
+.linkedin{
+    margin-left: 40px;
+    width: 120px;
+    height: 50px;
+}
+.login{
+  position: relative;
+ margin-left: 50px;
+}
+.vritiLogo{
+  display: none;
+ }
 }

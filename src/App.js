@@ -3,7 +3,7 @@ import SingUp from './components/SingUp';
 
 function App() {
   return (
-    <div className="App">
+    <div>
      <SingUp />
     </div>
   );

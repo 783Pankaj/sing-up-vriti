@@ -24,6 +24,7 @@
     top: -25px;
     left: 50px;
     width: max-content;
+    color: black;
 }
 
 .vector-img-two{
@@ -38,6 +39,7 @@
     top: -25px;
     left: 50px;
     width: max-content;
+    color: black;
 }
 
 .vector-img-three{
@@ -52,6 +54,7 @@
     top: -25px;
     left: 50px;
     width: max-content;
+    color: black;
 }
 
 .vector-img-four{
@@ -59,6 +62,7 @@
     top: 507px;
     left: 50px;
     z-index: 2;
+    
 }
 
 .vector-img-four h2{
@@ -66,6 +70,7 @@
     top: -25px;
     left: 50px;
     width: max-content;
+    color: black;
 }
 
 .line{

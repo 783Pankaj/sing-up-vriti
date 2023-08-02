@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: Nunito Sans!important;
   font-size: 20px;
+
 }
 .vritiLogo img{
   width: 100%;
@@ -29,6 +30,7 @@ form{
   margin-bottom: 15px;
   text-align: start;
 font-size: 15px;
+color: rgb(117, 112, 112);
 }
 .signupbtn {
   color: white;
@@ -55,12 +57,14 @@ button:hover {
     position: relative;
     /* bottom: 40px;
     left: 130px; */
+    
 }
 .first_row, .second_row, .third_row, .fourth_row{
   display: block;
   position: relative;
   margin-bottom: 15px;
   font-size: 15px;
+  color: rgb(117, 112, 112);
 }
 
 .labal-email{

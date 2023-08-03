@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../components/singup.css'
 import { useForm } from 'react-hook-form'
 import Modal from "./Modal";
-import LeftSideImage from './LeftSideImage';
-// import Modal from 'react-modal'
+import LeftContainer from './LeftContainer';
+
 const SingUp = () => {
     const [showModal, setShowModal] = React.useState(false);
   const [formData, setFormData] = React.useState({});
@@ -25,14 +25,12 @@ const SingUp = () => {
       };
     console.log(errors)
     return (
-        <div>
-             <div className='vritiLogo'>
-                <img src='vriti-logo.svg' alt=''/>
-            </div>
-            <div>
-                <LeftSideImage />
-            </div>
-          <div className='container'>
+    <>
+         <div className='vritiLogo'>
+        <img src='vriti-logo.svg' alt=''/>
+        </div>
+        <LeftContainer />
+        <div className='container'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='heading'><h1>Sign Up</h1></div>
                     <div className='first_row'>
@@ -162,8 +160,12 @@ const SingUp = () => {
                     <p className='sing-with'>Or Singup with</p>
             </div>
             <div className='socail-btn'>
-                <button className='google'>Google</button>
-                <button className='linkedin'>Linkedin</button>
+                <button className='google googleimg-btn'>Google</button>
+                <button className='linkedin linkedinimg-btn'>Linkedin</button>
+            </div>
+            <div className='socail-btn_icon'>
+                <button className='google_icon googleimg-btn_icon'></button>
+                <button className='linkedin_icon linkedinimg-btn-icon'></button>
             </div>
             <div className='login'>
                 <p>Do you have an account*? <label>Login</label></p>
@@ -186,7 +188,7 @@ const SingUp = () => {
                 </span>
             </Modal>
            )}
-    </div>
+    </>
     )
 }
 

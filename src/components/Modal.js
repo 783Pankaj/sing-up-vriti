@@ -5,8 +5,9 @@ const Modal = ({ onClose, children }) => {
     <div className="modal-container">
       <div className="modal-content">
         <button
-        onClick={onClose} className="close-btn">Back</button>
+        onClick={onClose} className="close-btn">Close</button>
         {children}
+        {console.log('this is children data',children)}
       </div>
     </div> 
   );

@@ -10,11 +10,9 @@
  object-fit: fill;
 }
 form{
-    padding: 10px;
-    
+    padding: 10px;  
 }
 .container { text-align: left;}
-/* Full-width input fields */
 .userName{
   width: 100%;
   padding: 15px;
@@ -55,9 +53,6 @@ button:hover {
 }
 .label-name{
     position: relative;
-    /* bottom: 40px;
-    left: 130px; */
-    
 }
 .first_row, .second_row, .third_row, .fourth_row{
   display: block;
@@ -69,19 +64,16 @@ button:hover {
 
 .labal-email{
     position: relative;
-    /* bottom: 40px;
-    left: 110px; */
 }
 p{ margin: 0; }
-.heading {
+.heading h1 {
   width: auto;
   position: relative;
   text-align: center;
+  font-size: 40px;
 }
 small {
   display: block;
-  /* width: 60%; */
-  /* margin: 0 auto; */
   text-align: left;
   color: red;
 }
@@ -92,57 +84,73 @@ small {
     border: none;
     background-color: #E8F0FE ;
     position: relative;
-    /* left: 50px; */
    border-radius: 10px;
 }
 
 .labal-password{
     position: relative;
-    /* bottom: 40px;
-    left: 120px; */
 }
 
 .labal-con-pass{
     position: relative;
-    /* bottom: 40px;
-    left: 150px; */
 }
+
 p.email_p, p.password_p, p.cnf_password_p {
   text-align: left;
-  /* width: 60%; */
   margin: 0 auto;
 }
 .or-singup  {
     text-align: center;
     position: relative;
-    /* top: 10px;
-    left: 80px; */
 }
 
 .google{
-    background-color: rgb(240, 181, 189);
-    width: 27%;
-    height: 40px;
-   border-radius: 10px;
-     margin: 5px 0 2px 100px;
-   text-indent: 10%;
-
+    background-color: rgb(252, 234, 234);
+   margin-left: 30px;
+    width: 150px;
+    height: 60px;
+    line-height: 1.2;
+    text-indent: 40px;
+    border-radius: 10px;
+    position: relative;
+    right: 10px;
+}
+.googleimg-btn{
+  border: none;
+  background-image: url('/public/googleImg.png'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 20px;
+  cursor: pointer;
 }
 .linkedin{
-    background-color:#bbcfe2;
-    width: 27%;
-    height: 40px;
+    background-color:rgb(218, 232, 246);
+    width: 150px;
+    height: 60px;
+    line-height: 1.2;
+    text-indent: 40px;
    border-radius: 10px;
-   margin: 5px 0 2px 20px;
+}
+
+.linkedinimg-btn{
+  border: none;
+  background-image: url('/public/linkedin-img.png'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 20px;
+  cursor: pointer;
 }
 .socail-btn{
     position: relative;
-    padding: 10px;
+    padding: 5px;
     justify-content: center;
+    display: flex;
 }
 .login{
-    position: relative;
-   margin-left: 35%;
+  display: flex;
+  justify-content: center;
 }
 .login p label{
     color: blue;
@@ -174,13 +182,14 @@ p.email_p, p.password_p, p.cnf_password_p {
   border-radius: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 984px) {
   .container {
     display: block;
     padding: 10px;
-    margin: 0 0 0 500px;
-    width: 70%;
+    margin: 0 auto;
+    width: 80%;
     text-align: center;
+    float: right;
   }
   .signupbtn{ width: 60%; }
   .labal-btn{
@@ -190,9 +199,7 @@ p.email_p, p.password_p, p.cnf_password_p {
   .userEmail, .userPassword, .confuserPassword, p.email_p, p.password_p, p.cnf_password_p { width: 60%; }
   .fname, .mname, .lname { display: inline-block; }
   .userName{
-    width: 13vw;
-    /* width: 100%; */
-    margin: 5px 0 22px 0;
+    width: 15vw;
   }
   .mname { margin: 0 1%; }
   small {
@@ -204,18 +211,38 @@ p.email_p, p.password_p, p.cnf_password_p {
     bottom: 0;
   }
   .fname,.mname,.lname{
-    margin-bottom: 0;
+    margin: 10px 2px 22px 10px;
   }
   .google{
-   margin-left: 40px;
-   width: 120px;
-    height: 50px;
-
+   width: 150px;
+    height: 60px;
+    line-height: 1.2;
+    text-indent: 40px;
+    
+}
+.googleimg-btn{
+  border: none;
+  background-image: url('/public/googleImg.png'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 20px;
+  cursor: pointer;
 }
 .linkedin{
-    margin-left: 40px;
-    width: 120px;
-    height: 50px;
+    width: 150px;
+    height: 60px;
+    line-height: 1.2;
+    text-indent: 40%
+}
+.linkedinimg-btn{
+  border: none;
+  background-image: url('/public/linkedin-img.png'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 20px;
+  cursor: pointer;
 }
 .login{
   position: relative;
@@ -224,4 +251,60 @@ p.email_p, p.password_p, p.cnf_password_p {
 .vritiLogo{
   display: none;
  }
+}
+@media (max-width: 570px){
+  .socail-btn{
+    display: none;
+  }
+}
+@media (min-width: 570px){
+  .socail-btn_icon{
+   display: none;
+  }
+}
+@media (max-width: 570px){
+  .socail-btn_icon{
+   display: flex;
+   justify-content: center;
+  }
+  .google_icon{
+    background-color: rgb(252, 234, 234);
+    margin-left: 30px;
+    width: 150px;
+    height: 60px;
+    line-height: 1.2;
+    text-indent: 40px;
+    border-radius: 10px;
+    position: relative;
+    right: 10px;
+  } 
+  .googleimg-btn_icon{
+    border: none;
+    background-image: url('/public/googleImg.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: center;
+    cursor: pointer;
+  }
+  .linkedin_icon{
+    background-color:rgb(218, 232, 246);
+    margin-left: 10px;
+    width: 150px;
+    height: 60px;
+    line-height: 1.2;
+    text-indent: 40px;
+    border-radius: 10px;
+    position: relative;
+    right: 10px;
+  }  
+  .linkedinimg-btn-icon{
+    border: none;
+    background-image: url('/public/linkedin-img.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: center;
+    cursor: pointer;
+  }
 }

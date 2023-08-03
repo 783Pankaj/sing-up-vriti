@@ -35,7 +35,7 @@ const SingUp = () => {
                     <div className='first_row'>
                         <div className="fname">
                             <p className="fname_p1">
-                                <label className='label-name' htmlFor='fname'>First Name*</label>
+                                <label className='label-name' htmlFor='fname'>First Name *</label>
                             </p>
                             <p className="fname_p2">
                                 <input className='userName'
@@ -87,7 +87,7 @@ const SingUp = () => {
                     </div>
                     <div className='second_row'>
                         <p className='email_p'>
-                            <label htmlFor='email' className='labal-email'>Email ID</label>
+                            <label htmlFor='email' className='labal-email'>Email ID *</label>
                         </p>
                         <p className='email_input_p'>
                             <input className='userEmail' 
@@ -107,7 +107,7 @@ const SingUp = () => {
                     </div>
                     <div className='third_row'>
                         <p className='password_p'>
-                            <label htmlFor='password' className='labal-password'>Password*</label>
+                            <label htmlFor='password' className='labal-password'>Password *</label>
                         </p>
                         <p className='password_input_p'>
 
@@ -129,7 +129,7 @@ const SingUp = () => {
                     </div>
                     <div className='fourth_row' >
                         <p className='cnf_password_p'>
-                            <label htmlFor='Confpassword' className='labal-con-pass'>Conform Password</label>
+                            <label htmlFor='Confpassword' className='labal-con-pass'>Conform Password *</label>
                         </p>
                         <p className='cnf_password_input'>
                             <input className='confuserPassword'
@@ -157,7 +157,7 @@ const SingUp = () => {
             </form>
             <div className='or-singup'>
                   <p>
-                    Or Singup with
+                    Or Signup with
                     </p>
             </div>
             <div className='socail-btn'>

@@ -221,7 +221,7 @@ p.email_p, p.password_p, p.cnf_password_p {
     bottom: 0;
   }
   .fname,.mname,.lname{
-    margin: 10px 2px 22px 10px;
+    margin: 10px 4px 7px 8px;
   }
   .google{
    width: 150px;

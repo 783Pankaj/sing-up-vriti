@@ -12,7 +12,6 @@ const SingUp = () => {
             // mode:'onChange'
             mode: 'onTouched'
         }
-        
     );
     const onSubmit = (data) =>{
         setFormData(data);
@@ -157,7 +156,9 @@ const SingUp = () => {
                     </div>
             </form>
             <div className='or-singup'>
-                    <p className='sing-with'>Or Singup with</p>
+                  <p>
+                    Or Singup with
+                    </p>
             </div>
             <div className='socail-btn'>
                 <button className='google googleimg-btn'>Google</button>

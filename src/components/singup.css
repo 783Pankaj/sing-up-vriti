@@ -99,11 +99,20 @@ p.email_p, p.password_p, p.cnf_password_p {
   text-align: left;
   margin: 0 auto;
 }
-.or-singup  {
-    text-align: center;
-    position: relative;
+.or-singup p {
+  position: relative;
+    display: flex;
+  flex-direction: row;
+  width:50%;
+  margin: 20px auto;
 }
 
+.or-singup p:before, .or-singup p:after {
+  content: "";
+  flex:  1 1;
+  border-bottom: 1px solid #c4c2c2;
+  margin:  auto;
+}
 .google{
     background-color: rgb(252, 234, 234);
    margin-left: 30px;
@@ -151,6 +160,7 @@ p.email_p, p.password_p, p.cnf_password_p {
 .login{
   display: flex;
   justify-content: center;
+  padding: 15px;
 }
 .login p label{
     color: blue;

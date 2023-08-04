@@ -1,37 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../components/singup.css'
 import { useForm } from 'react-hook-form'
 import Modal from "./Modal";
 import LeftContainer from './LeftContainer';
 
 const SingUp = () => {
-    const [showModal, setShowModal] = React.useState(false);
-  const [formData, setFormData] = React.useState({});
+    const [showModal, setShowModal] = useState(false);
+    const [formData, setFormData] = useState({});
     const { register, handleSubmit, formState: { errors }, getValues, reset } = useForm(
         {
             // mode:'onChange'
             mode: 'onTouched'
         }
     );
-    const onSubmit = (data) =>{
+    const onSubmit = (data) => {
         setFormData(data);
         setShowModal(true)
         console.log(data)
-    } 
+    }
     const closeModal = () => {
         setShowModal(false);
         reset();
-      };
+    };
     console.log(errors)
     return (
-    <>
-         <div className='vritiLogo'>
-        <img src='vriti-logo.svg' alt=''/>
-        </div>
-        <LeftContainer />
-        <div className='container'>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className='heading'><h1>Sign Up</h1></div>
+        <>
+            <div className='vritiLogo'>
+                <img src='vriti-logo.svg' alt='' />
+            </div>
+            <LeftContainer />
+            <div className='container'>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className='heading'><h1>Sign Up</h1></div>
                     <div className='first_row'>
                         <div className="fname">
                             <p className="fname_p1">
@@ -40,20 +40,20 @@ const SingUp = () => {
                             <p className="fname_p2">
                                 <input className='userName'
                                     placeholder='Enter your First Name'
-                                    type='text' 
+                                    type='text'
                                     id='fname'
                                     name='fname'
                                     {...register('fname',
-                                    {
-                                        required:true,
-                                        validate:{
-                                            minLength: (v) => v.length >= 4
+                                        {
+                                            required: true,
+                                            validate: {
+                                                minLength: (v) => v.length >= 4
+                                            }
                                         }
-                                    }
                                     )}
-                                    />
-                                    {errors.fname?.type === 'required' && (<small className='user-error'>Username is required</small>)}
-                                {errors.fname?.type === 'minLength' &&(<small  className='user-error'>Enter 4 char</small>)}
+                                />
+                                {errors.fname?.type === 'required' && (<small className='user-error'>Username is required</small>)}
+                                {errors.fname?.type === 'minLength' && (<small className='user-error'>Enter 4 char</small>)}
                             </p>
                         </div>
                         <div className="mname">
@@ -77,7 +77,7 @@ const SingUp = () => {
                             <p className="lname_p2">
                                 <input className='userName'
                                     placeholder='Enter your Last Name'
-                                    type='text' 
+                                    type='text'
                                     id='lname'
                                     name='lname'
                                     {...register('lname')}
@@ -90,7 +90,7 @@ const SingUp = () => {
                             <label htmlFor='email' className='labal-email'>Email ID *</label>
                         </p>
                         <p className='email_input_p'>
-                            <input className='userEmail' 
+                            <input className='userEmail'
                                 type='email'
                                 id='email'
                                 name='email'
@@ -98,12 +98,12 @@ const SingUp = () => {
                                 {...register('email', {
                                     required: 'This field is Required',
                                     validate: {
-                                         matchPattern: (v) => /^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,3})+$/.test(v) || "Email address must be a valid address",
+                                        matchPattern: (v) => /^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,3})+$/.test(v) || "Email address must be a valid address",
                                     },
                                 })}
                             />
                         </p>
-                        {errors.email && (<small style={{color:'red'}}>{errors.email.message}</small>)}
+                        {errors.email && (<small style={{ color: 'red' }}>{errors.email.message}</small>)}
                     </div>
                     <div className='third_row'>
                         <p className='password_p'>
@@ -112,18 +112,18 @@ const SingUp = () => {
                         <p className='password_input_p'>
 
                             <input className='userPassword'
-                         type='password'
-                        id='password'
-                        name='password'
-                        {...register('password',{ 
-                            required:'This field is Required',
-                            validate:{
-                                maxLength:(v)=>
-                                  v.length<=10 || 'not more then 10 digit',
-                                 matchPattern: (v)=> /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(v) || 'Password must be valid'
-                            }
-                        })}
-                    />
+                                type='password'
+                                id='password'
+                                name='password'
+                                {...register('password', {
+                                    required: 'This field is Required',
+                                    validate: {
+                                        maxLength: (v) =>
+                                            v.length <= 10 || 'not more then 10 digit',
+                                        matchPattern: (v) => /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(v) || 'Password must be valid'
+                                    }
+                                })}
+                            />
                         </p>
                         {errors.password?.message && (<small>{errors.password.message}</small>)}
                     </div>
@@ -137,12 +137,12 @@ const SingUp = () => {
                                 id='Confpassword'
                                 name='Confpassword'
                                 placeholder='Enter Your Conform Password'
-                                {...register('Confpassword',{ 
-                                    required:'This field is Required',
-                                    validate:{
-                                        maxLength:(v)=>
-                                        v.length<=10 || 'not more then 10 digit',
-                                        matchPattern: (v)=> v=== getValues('password') || "password does not match",
+                                {...register('Confpassword', {
+                                    required: 'This field is Required',
+                                    validate: {
+                                        maxLength: (v) =>
+                                            v.length <= 10 || 'not more then 10 digit',
+                                        matchPattern: (v) => v === getValues('password') || "password does not match",
                                         //  value:(value)=> value === getValues('password') || "password dose not match"
                                     }
                                 })}
@@ -152,45 +152,44 @@ const SingUp = () => {
                     </div>
                     <div class="clearfix">
                         <button type="submit" className="signupbtn" >Sign Up</button>
-                           
+
                     </div>
-            </form>
-            <div className='or-singup'>
-                  <p>
-                    Or Signup with
+                </form>
+                <div className='or-singup'>
+                    <p>
+                        Or Signup with
                     </p>
+                </div>
+                <div className='socail-btn'>
+                    <button className='google googleimg-btn'>Google</button>
+                    <button className='linkedin linkedinimg-btn'>Linkedin</button>
+                </div>
+                <div className='socail-btn_icon'>
+                    <button className='google_icon googleimg-btn_icon'></button>
+                    <button className='linkedin_icon linkedinimg-btn-icon'></button>
+                </div>
+                <div className='login'>
+                    <p>Do you have an account*? <label>Login</label></p>
+                </div>
             </div>
-            <div className='socail-btn'>
-                <button className='google googleimg-btn'>Google</button>
-                <button className='linkedin linkedinimg-btn'>Linkedin</button>
-            </div>
-            <div className='socail-btn_icon'>
-                <button className='google_icon googleimg-btn_icon'></button>
-                <button className='linkedin_icon linkedinimg-btn-icon'></button>
-            </div>
-            <div className='login'>
-                <p>Do you have an account*? <label>Login</label></p>
-            </div>
-        </div>
-        {showModal && (
-            <Modal onClose={closeModal}>
-                <h3>Thank You For Signing up.</h3>
-                <h4>Here is your information:</h4>
-                <br/>
-                <span>
-                    Name: {formData.fname} {formData.mname} {formData.lname}
-                    <hr/>
-                    <br/>
-                    Email: {formData.email}
-                    <hr/>
-                    <br/>
-                    Password: {formData.password}
-                    <hr/>
-                </span>
-            </Modal>
-           )}
-    </>
+            {showModal && (
+                <Modal onClose={closeModal}>
+                    <h3>Thank You For Signing up.</h3>
+                    <h4>Here is your information:</h4>
+                    <br />
+                    <span>
+                        Name: {formData.fname} {formData.mname} {formData.lname}
+                        <hr />
+                        <br />
+                        Email: {formData.email}
+                        <hr />
+                        <br />
+                        Password: {formData.password}
+                        <hr />
+                    </span>
+                </Modal>
+            )}
+        </>
     )
 }
-
 export default SingUp
